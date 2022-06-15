@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo-box {
+    width: 75px;
+    height: 22px;
+
+    @include media(tablet) {
+        width: 95px;
+        height: 29px;
+    }
+
+    @include media(desktop) {
+        width: 114px;
+        height: 35px;
+    }
+}

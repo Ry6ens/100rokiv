@@ -1,0 +1,67 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background: var(--color-bg);
+
+    border-top: 1px solid var(--color-text);
+}
+
+.header__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header__address {
+    display: none;
+
+    @include media(desktop) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header__list {
+    display: none;
+
+    @include media(desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+}
+
+.header__item {
+
+    @include media(desktop) {
+        &:last-child {
+            margin-left: 50px;
+        }
+    }
+}
+
+// Pages: Ground, Above, Redroom
+.header__title {
+    width: 125px;
+
+    font-weight: 400;
+    font-size: var(--text-size-mobile);
+    line-height: var(--line-height-content);
+    letter-spacing: var(--letter-spacing-mobile);
+
+    @include media(mobile) {
+        width: 240px;
+
+        font-weight: 700;
+        font-size: var(--text-title-tablet);
+        letter-spacing: var(--letter-spacing-desktop);
+    }
+
+    @include media(desktop) {
+        width: 100%;
+
+        font-size: var(--text-title-desktop);
+        line-height: var(--line-height-desktop);
+    }
+}

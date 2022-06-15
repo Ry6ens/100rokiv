@@ -1,0 +1,28 @@
+// Hamburger Button
+.btn__hamburger {
+    display: flex;
+
+    @include media(desktop) {
+        display: none;
+    }
+}
+
+.btn__mobile-only {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include media(desktop) {
+        display: none;
+    }
+}
+
+.btn__mobile-book {
+    font-size: var(--text-size-mobile);
+    letter-spacing: var(--letter-spacing-mobile);
+
+    @include media(mobile) {
+        font-size: var(--text-size);
+        letter-spacing: var(--letter-spacing);
+    }
+}

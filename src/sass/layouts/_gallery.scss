@@ -1,0 +1,47 @@
+// Menu 
+.gallery_gradient-background {
+    background: linear-gradient(to bottom, var(--color-bg-panel), var(--color-bg));
+}
+
+.gallery__title {
+    padding-top: 76px;
+    padding-bottom: 76px;
+
+    font-weight: 400;
+    font-size: var(--text-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+}
+
+.gallery__list-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery__item-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+// Photos 
+
+.gallery__title-padding {
+    padding-top: 38px;
+}
+
+.gallery__list-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery__item-img {
+    margin-bottom: 40px;
+}

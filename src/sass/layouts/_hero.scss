@@ -1,0 +1,36 @@
+.hero__img-section {
+    padding-top: 0;
+}
+
+.hero__img {
+    width: 100vw;
+    transform: translateX(-20px);
+
+    @include media(desktop) {
+        transform: translateX(-40px);
+    }
+}
+
+.hero__text {
+    margin-top: 40px;
+
+    font-weight: 300;
+    font-size: var(--text-content);
+    line-height: var(--line-height-content);
+    letter-spacing: var(--letter-spacing-content);
+    text-transform: none;
+
+    &:nth-child(3n),
+    &:nth-child(4n) {
+        margin-top: 24px;
+    }
+
+    @include media(desktop) {
+        margin-top: 76px;
+
+        &:nth-child(3n),
+        &:nth-child(4n) {
+            margin-top: 38px;
+        }
+    }
+}
