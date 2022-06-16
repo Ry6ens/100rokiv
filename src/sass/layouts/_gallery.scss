@@ -4,13 +4,17 @@
 }
 
 .gallery__title {
-  padding-top: 76px;
-  padding-bottom: 76px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 
   font-weight: 400;
   font-size: var(--text-size);
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
+
+  &-padding {
+    padding-top: 0;
+  }
 }
 
 .gallery__list-menu {
@@ -42,34 +46,60 @@
 
 // Photos
 
-.gallery__title-padding {
-  padding-top: 38px;
+// .gallery__list-img {
+//   // display: grid;
+//   // grid-template-columns: repeat(2, 1fr);
+//   // grid-auto-rows: 73vw 50vw;
+//   // gap: 20px;
+//   display: flex;
+
+//   @include media(desktop) {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
+
+// }
+
+// .gallery__item-img {
+//   width: 130px;
+//       // grid-column: 1/3;
+
+//   @include media(desktop) {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .gallery__img {
+//   width: 200px;
+// }
+
+.gallery__photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 73vw 50vw;
+    gap: 20px;
 }
 
-.gallery__list-img {
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  // grid-auto-rows: 73vw 50vw;
-  // gap: 20px;
-  display: flex;
+.photo {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
 
-  @include media(desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  &:nth-child(3n) {
+    grid-column: 1/3;
   }
-
 }
 
-.gallery__item-img {
-  width: 130px;
-      // grid-column: 1/3;
+@each $gallery in borshch,
+chomber,
+sudak,
+vereshchaka,
+vilkivska,
+baklazhan
 
-  @include media(desktop) {
-    margin-bottom: 40px;
+ {
+  .photo-#{$gallery} {
+    background-image: url('../images/menu-food/#{$gallery}.jpg');
   }
-}
-
-.gallery__img {
-  width: 200px;
 }
