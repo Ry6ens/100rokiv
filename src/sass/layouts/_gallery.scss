@@ -18,25 +18,34 @@
 }
 
 .gallery__list-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 
   @include media(desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
   }
 }
 
 .gallery__item-menu {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  margin: 0px;
 
   &:not(:last-child) {
     margin-bottom: 25px;
   }
 
+  @include media(tablet) {
+    display: flex;
+    width: calc((100% - 80px) / 2);
+    margin: 0px 20px;
+  }
+
   @include media(desktop) {
-    margin: 0px 20px 40px;
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -99,7 +108,10 @@
   }
 
   @include media(desktop) {
-    grid-column: 1;
+
+    &:nth-child(3n) {
+        grid-column: auto;
+      }
   }
 }
 
@@ -113,5 +125,12 @@ baklazhan
  {
   .photo-#{$gallery} {
     background-image: url('../images/menu-food/#{$gallery}.jpg');
+  }
+}
+
+.photo-sudak {
+  // background-image: url('../images/menu-food/vereshchaka.jpg');
+  @include media(desktop) {
+    background-image: url('../images/menu-food/vereshchaka.jpg');
   }
 }
