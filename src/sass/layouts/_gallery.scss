@@ -134,3 +134,17 @@ baklazhan
     background-image: url('../images/menu-food/vereshchaka.jpg');
   }
 }
+
+.photo-vilkivska {
+  @include media(desktop) {
+    grid-column: 1 / 3;
+      background-image: url('../images/menu-food/sudak.jpg');
+    }
+}
+
+.photo-baklazhan {
+  @include media(desktop) {
+      grid-column: 1 / 3;
+      background-image: url('../images/menu-food/baklazhan.jpg');
+    }
+}
